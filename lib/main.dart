@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'components/ClassPage.dart';
 
 void main() => runApp(FightApp());
 
+/// class for our main application
 class FightApp extends StatefulWidget {
   FightApp({Key key}) : super(key: key);
 
@@ -11,7 +13,9 @@ class FightApp extends StatefulWidget {
 /// Main app class
 class _FightAppState extends State<FightApp> {
     int _selectedIndex = 0;
-
+    final _pages = [
+      new ClassPageWidget(),
+    ];
 
     final _widgetOptions = [
       Text('Classes'),
@@ -20,6 +24,7 @@ class _FightAppState extends State<FightApp> {
       Text('Contact'),
     ];
 
+    /// build function to create the widget
     @override
     Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,9 +38,7 @@ class _FightAppState extends State<FightApp> {
           title: Text("Fight For Fitness"),
 
         ),
-        body: Center(
-          child: Text("Test"),
-        ),
+        body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           items:
@@ -57,5 +60,16 @@ class _FightAppState extends State<FightApp> {
       setState(() {
         _selectedIndex = index;
       });
+    }
+
+    List<Widget> _buildPages() {
+      List<Widget> pages = [];
+      return pages;
+    }
+
+    Widget _buildClassPage() {
+      return Scaffold(
+
+      );
     }
 }
