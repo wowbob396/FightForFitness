@@ -12,6 +12,7 @@ class FightApp extends StatefulWidget {
 class _FightAppState extends State<FightApp> {
     int _selectedIndex = 0;
 
+
     final _widgetOptions = [
       Text('Classes'),
       Text('Calendar'),
@@ -22,6 +23,10 @@ class _FightAppState extends State<FightApp> {
     @override
     Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.green,
+        accentColor: Colors.lightGreen,
+      ),
       title: "Fight For Fitness",
       home: Scaffold(
         appBar: AppBar(
@@ -31,11 +36,13 @@ class _FightAppState extends State<FightApp> {
         body: Center(
           child: Text("Test"),
         ),
-        bottomNavigationBar: BottomNavigationBar(items:
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          items:
           <BottomNavigationBarItem>  [
             BottomNavigationBarItem(icon: Icon(Icons.filter_hdr),title: Text("Classes")),
             BottomNavigationBarItem(icon: Icon(Icons.calendar_today), title: Text("Calendar")),
-            //BottomNavigationBarItem(icon: Icon(Icons.info), title: Text("About")),
+            BottomNavigationBarItem(icon: Icon(Icons.info), title: Text("About")),
             BottomNavigationBarItem(icon: Icon(Icons.contact_mail), title: Text("Contact")),
           ],
           currentIndex: _selectedIndex,
@@ -51,33 +58,4 @@ class _FightAppState extends State<FightApp> {
         _selectedIndex = index;
       });
     }
-}
-
-Widget _customNavBar() {
-
-}
-
-Widget buttonSection() {
-  Color color = Colors.blue;
-  print("Hello, World");
-  Widget buttonSection = Container(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-
-      ],
-    ),
-  );
-
-  return buttonSection;
-}
-
-
-
-Widget buildButtonColumn(Color color, IconData icon, String label) {
-  return Column (
-
-  );
-
-
 }
