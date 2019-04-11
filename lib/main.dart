@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'components/ClassPage.dart';
+import 'components/CalendarPage.dart';
+import 'components/AboutPage.dart';
+import 'components/ContactPage.dart';
 
 void main() => runApp(FightApp());
 
@@ -14,7 +17,10 @@ class FightApp extends StatefulWidget {
 class _FightAppState extends State<FightApp> {
     int _selectedIndex = 0;
     final _pages = [
-      new ClassPageWidget(),
+      ClassPage(),
+      CalendarPage(),
+      AboutPage(),
+      ContactPage()
     ];
 
     final _widgetOptions = [
