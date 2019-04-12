@@ -18,11 +18,11 @@ class FightApp extends StatefulWidget {
 class _FightAppState extends State<FightApp> {
     int _selectedIndex = 0;
     final _pages = [
+      new AnnouncementPage(),
       new ClassPage(),
       new CalendarPage(),
       new AboutPage(),
       new ContactPage(),
-      new AnnouncementPage(),
     ];
 
 
