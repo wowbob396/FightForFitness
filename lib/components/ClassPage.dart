@@ -5,7 +5,13 @@ class ClassPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: Text("Hello, World!  Welcome to the class page"),
+      body: Center(
+        child: Card(
+          child: Column(
+
+          ),
+        ),
+      ),
     );
   }
 }
