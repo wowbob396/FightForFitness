@@ -43,7 +43,7 @@ class ClassPage extends StatelessWidget {
               child: RichText(
                 text:TextSpan(
                   text: _mmaText,
-                  style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
             ),
@@ -73,7 +73,7 @@ class ClassPage extends StatelessWidget {
               child: RichText(
                 text:TextSpan(
                   text: _grapplingText,
-                  style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+                  style: TextStyle(color: Colors.black),
                 ),
               ),
             ),
@@ -102,7 +102,7 @@ class ClassPage extends StatelessWidget {
             child: RichText(
                 text:TextSpan(
                   text: _strikingText,
-                  style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+                  style: TextStyle(color: Colors.black),
                 ),
             ),
           ),
