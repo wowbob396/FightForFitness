@@ -1,11 +1,44 @@
 import "package:flutter/material.dart";
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 class AnnouncementPage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      body: Text("Hello, World!  Welcome to the Annoucement page"),
+      body: _getData(context),
     );
   }
+
+  Widget _getData(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+      stream: Firestore.instance.collection('announcements').snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) return LinearProgressIndicator();
+        List<DocumentSnapshot> data = snapshot.data.documents;
+        List<String> test = new List<String>();
+
+        for (DocumentSnapshot snap in data) {
+          print(snap.data.toString());
+        }
+        return Scaffold(
+          body: Text(""),
+        );
+      },
+    );
+  }
+
+  Widget _buildList() {
+
+  }
+
+  Widget _buildListItem(BuildContext context, Announcement announcement) {
+
+  }
+}
+
+class Announcement {
+  String text;
+  DateTime date;
+
+
 }
