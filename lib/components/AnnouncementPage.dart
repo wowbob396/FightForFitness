@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:cloud_firestore/cloud_firestore.dart';
+
 class AnnouncementPage extends StatelessWidget {
 
   @override
@@ -18,7 +19,7 @@ class AnnouncementPage extends StatelessWidget {
         List<String> test = new List<String>();
 
         for (DocumentSnapshot snap in data) {
-          print(snap.data.toString());
+          //print(snap.data.toString());
         }
         return Scaffold(
           body: Text(""),
@@ -31,14 +32,21 @@ class AnnouncementPage extends StatelessWidget {
 
   }
 
-  Widget _buildListItem(BuildContext context, Announcement announcement) {
-
+  Widget _buildListItem(BuildContext context, Map data) {
+    final Announcement announcement = Announcement.fromMap(data);
   }
 }
 
 class Announcement {
-  String text;
-  DateTime date;
+  final String text;
+  final DateTime date;
+  final DocumentReference reference;
 
+  Announcement.fromMap(Map<String, dynamic> map, {this.reference}) :
+      assert(map['text'] != null),
+      assert(map['date'] != null),
+      text = map['text'],
+      date = map['date'];
 
+  Announcement.fromSnapshot(DocumentSnapshot snapshot): this.fromMap(snapshot.data, reference: snapshot.reference);
 }
