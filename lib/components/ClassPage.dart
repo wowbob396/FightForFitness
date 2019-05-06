@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+/// Class page for, well, the classes at the gym!
+///
 class ClassPage extends StatelessWidget {
 
   final String _strikingText = "This is a class comprised of techniques from multiple martial art styles that will teach fundamental principles of striking - being able to hit an opponent while avoiding being hit back. There will be a strong emphasis on basic foundational skills that will be great for anyone looking to improve their striking game, all the way from complete beginners to professional fighters. Since fighting is a very physically demanding task, there will be drills and exercises incorporated into the class to build not only fighting skills, but overall athletic ability. A great class for anyone looking to learn how to fight, get in shape, and have fun. 1 hour class. all levels";
