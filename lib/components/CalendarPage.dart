@@ -5,18 +5,27 @@ class CalendarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(image: Image.network('https://res.cloudinary.com/dziablq1m/image/upload/v1534214969/Beemon/Background/wallpaper-07.jpg').image,
-          fit: BoxFit.cover,
-        )
-      ),
-      child: Container(
-        color: Colors.black38,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[],
-        )
+      child: Row(
+        children: <Widget>[
+          Column(
+            children: <Widget>[
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(6.0),
+                ),
+                child: RichText(text: TextSpan(
+
+                  ),
+
+                ),
+              ),
+              Text("Column 2")
+            ],
+          )
+        ],
       ),
     );
   }
+
 }

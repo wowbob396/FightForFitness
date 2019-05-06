@@ -4,6 +4,7 @@ import 'components/CalendarPage.dart';
 import 'components/AnnouncementPage.dart';
 import 'components/AboutPage.dart';
 import 'components/ContactPage.dart';
+import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 
 void main() => runApp(FightApp());
 
@@ -51,19 +52,17 @@ class _FightAppState extends State<FightApp> {
           ],
         ),
         body: _pages[_selectedIndex],
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
+        bottomNavigationBar: BottomNavyBar(
           items:
-          <BottomNavigationBarItem>  [
-            BottomNavigationBarItem(icon: Icon(Icons.announcement), title: Text("Announcements")),
-            BottomNavigationBarItem(icon: Icon(Icons.filter_hdr),title: Text("Classes")),
-            BottomNavigationBarItem(icon: Icon(Icons.calendar_today), title: Text("Calendar")),
-            BottomNavigationBarItem(icon: Icon(Icons.info), title: Text("About")),
-            BottomNavigationBarItem(icon: Icon(Icons.contact_mail), title: Text("Contact")),
+          <BottomNavyBarItem>  [
+            BottomNavyBarItem(icon: Icon(Icons.announcement), title: Text("Announcements"),activeColor: Colors.green),
+            BottomNavyBarItem(icon: Icon(Icons.filter_hdr),title: Text("Classes"),activeColor: Colors.green),
+            BottomNavyBarItem(icon: Icon(Icons.calendar_today), title: Text("Calendar"),activeColor: Colors.green),
+            BottomNavyBarItem(icon: Icon(Icons.info), title: Text("About"),activeColor: Colors.green),
+            BottomNavyBarItem(icon: Icon(Icons.contact_mail), title: Text("Contact"),activeColor: Colors.green),
           ],
           currentIndex: _selectedIndex,
-          fixedColor: Colors.green,
-          onTap: _onItemTapped,
+          onItemSelected: _onItemTapped,
         ),
       ),
     );
@@ -72,6 +71,7 @@ class _FightAppState extends State<FightApp> {
     void _onItemTapped(int index) {
       setState(() {
         _selectedIndex = index;
+
       });
     }
 }
