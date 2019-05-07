@@ -9,6 +9,9 @@ import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 void main() => runApp(FightApp());
 
 /// class for our main application
+/// currently, navigation is done via the bottom navigation bar, but
+/// I would like this to be reworked
+/// TODO: Rework navigation to use the hamburger button menu
 class FightApp extends StatefulWidget {
   FightApp({Key key}) : super(key: key);
 
