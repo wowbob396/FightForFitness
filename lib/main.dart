@@ -38,18 +38,16 @@ class _FightAppState extends State<FightApp> {
       title: "Fight For Fitness",
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Fight For Fitness"),
-          actions: <Widget>[
-            IconButton(
-              disabledColor: Colors.white,
-              icon: Icon(Icons.home),
-              onPressed: () => {
-                setState(() {
-                  _selectedIndex = 0;
-                })
-              },
+          leading: IconButton(
+            icon: Icon(
+              Icons.menu,
+              semanticLabel: 'menu',
             ),
-          ],
+            onPressed: () {
+              print("Menu Button");
+            },
+          ),
+          title: Text("Fight For Fitness"),
         ),
         body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavyBar(
