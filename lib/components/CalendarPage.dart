@@ -4,24 +4,26 @@ class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-      child: Row(
+    return Center(
+      child: GridView.count(
+        crossAxisCount: 2,
+        padding: EdgeInsets.all(16.0),
         children: <Widget>[
-          Column(
-            children: <Widget>[
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black),
-                  borderRadius: BorderRadius.circular(6.0),
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                AspectRatio(
+                  aspectRatio: 18.0/11.0,
+                  child: Image.asset("assets/mma.png"),
                 ),
-                child: RichText(text: TextSpan(
-
-                  ),
-
-                ),
-              ),
-              Text("Column 2")
-            ],
+                Padding(
+                  padding: EdgeInsets.fromLTRB(16.0, 12.0, 16.0, 8.0),
+                  child: ,
+                )
+              ],
+            ),
           )
         ],
       ),

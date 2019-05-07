@@ -5,7 +5,7 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: Text("Hello, World!  Welcome to the about page"),
+      body: Text("Hello, World!  Welcome to the contact page"),
     );
   }
 }
