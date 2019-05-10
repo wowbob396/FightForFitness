@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Center(
       child: GridView.count(
         crossAxisCount: 2,
