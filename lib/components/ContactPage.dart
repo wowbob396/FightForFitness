@@ -12,20 +12,44 @@ class ContactPage extends StatelessWidget {
               SizedBox(height: 120),
               Column(
                 children: <Widget>[
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       filled: true,
-                      labelText: 'Username',
+                      labelText: 'Full Name',
                     ),
                   ),
 // spacer
                   SizedBox(height: 12.0),
 // [Password]
-                  TextField(
+                  TextFormField(
                     decoration: InputDecoration(
                       filled: true,
                       labelText: 'Email',
                     ),
+                  ),
+
+                  SizedBox(height: 12.0),
+// [Password]
+                  TextFormField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      labelText: 'Phone Number',
+                    ),
+                  ),
+// [Password]
+
+                  Column(
+                    children: <Widget>[
+                      TextFormField(
+
+                        decoration: InputDecoration(
+
+                          filled: false,
+                          labelText: 'Message',
+                        ),
+
+                      ),
+                    ],
                   ),
                 ],
               )
