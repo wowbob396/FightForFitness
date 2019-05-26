@@ -9,14 +9,15 @@ class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Row(
+    return ListView(
       children: <Widget>[
         Column(
           children: <Widget>[
             Container(
+              padding: EdgeInsets.all(48.0),
               child: Column(
                 children: <Widget>[
-                  Text("")
+                  Text("Monday")
                 ],
               ),
               decoration: BoxDecoration(
@@ -35,11 +36,110 @@ class CalendarPage extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
+
+            Container(
+              padding: EdgeInsets.all(48.0),
+              child: Column(
+                children: <Widget>[
+                  Text("Monday")
+                ],
+              ),
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                    color: Colors.black,
+                  ),
+                  bottom: BorderSide(
+                    color: Colors.black,
+                  ),
+                  left: BorderSide(
+                    color: Colors.black,
+                  ),
+                  right: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.all(48.0),
+              child: Column(
+                children: <Widget>[
+                  Text("Monday")
+                ],
+              ),
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                    color: Colors.black,
+                  ),
+                  bottom: BorderSide(
+                    color: Colors.black,
+                  ),
+                  left: BorderSide(
+                    color: Colors.black,
+                  ),
+                  right: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.all(48.0),
+              child: Column(
+                children: <Widget>[
+                  Text("Monday")
+                ],
+              ),
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                    color: Colors.black,
+                  ),
+                  bottom: BorderSide(
+                    color: Colors.black,
+                  ),
+                  left: BorderSide(
+                    color: Colors.black,
+                  ),
+                  right: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.all(48.0),
+              child: Column(
+                children: <Widget>[
+                  Text("Monday")
+                ],
+              ),
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(
+                    color: Colors.black,
+                  ),
+                  bottom: BorderSide(
+                    color: Colors.black,
+                  ),
+                  left: BorderSide(
+                    color: Colors.black,
+                  ),
+                  right: BorderSide(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
           ],
         )
       ],
     );
   }
-
 }
