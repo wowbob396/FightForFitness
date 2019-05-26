@@ -10,136 +10,29 @@ class CalendarPage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return ListView(
-      children: <Widget>[
-        Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(48.0),
-              child: Column(
-                children: <Widget>[
-                  Text("Monday")
-                ],
-              ),
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: Colors.black,
-                  ),
-                  bottom: BorderSide(
-                    color: Colors.black,
-                  ),
-                  left: BorderSide(
-                    color: Colors.black,
-                  ),
-                  right: BorderSide(
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-
-            Container(
-              padding: EdgeInsets.all(48.0),
-              child: Column(
-                children: <Widget>[
-                  Text("Monday")
-                ],
-              ),
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: Colors.black,
-                  ),
-                  bottom: BorderSide(
-                    color: Colors.black,
-                  ),
-                  left: BorderSide(
-                    color: Colors.black,
-                  ),
-                  right: BorderSide(
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-
-            Container(
-              padding: EdgeInsets.all(48.0),
-              child: Column(
-                children: <Widget>[
-                  Text("Monday")
-                ],
-              ),
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: Colors.black,
-                  ),
-                  bottom: BorderSide(
-                    color: Colors.black,
-                  ),
-                  left: BorderSide(
-                    color: Colors.black,
-                  ),
-                  right: BorderSide(
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-
-            Container(
-              padding: EdgeInsets.all(48.0),
-              child: Column(
-                children: <Widget>[
-                  Text("Monday")
-                ],
-              ),
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: Colors.black,
-                  ),
-                  bottom: BorderSide(
-                    color: Colors.black,
-                  ),
-                  left: BorderSide(
-                    color: Colors.black,
-                  ),
-                  right: BorderSide(
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-
-            Container(
-              padding: EdgeInsets.all(48.0),
-              child: Column(
-                children: <Widget>[
-                  Text("Monday")
-                ],
-              ),
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(
-                    color: Colors.black,
-                  ),
-                  bottom: BorderSide(
-                    color: Colors.black,
-                  ),
-                  left: BorderSide(
-                    color: Colors.black,
-                  ),
-                  right: BorderSide(
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        )
-      ],
+      children: ListTile.divideTiles(
+        context: context,
+        tiles: <Widget>[
+          ListTile(
+            title: Text("Monday"),
+          ),
+          ListTile(
+            title: Text("Tuesday"),
+          ),
+          ListTile(
+            title: Text("Wednesday"),
+          ),
+          ListTile(
+            title: Text("Thursday"),
+          ),
+          ListTile(
+            title: Text("Friday"),
+          ),
+          ListTile(
+            title: Text("Saturday"),
+          ),
+        ],
+      ).toList(),
     );
   }
 }
