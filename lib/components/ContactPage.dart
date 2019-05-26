@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
+/// class for the contact page which handles users sending queries about gym membership
 class ContactPage extends StatelessWidget {
+
+  final _usernameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _messageController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,11 +15,12 @@ class ContactPage extends StatelessWidget {
           child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 24.0),
             children: <Widget>[
-              Text("Hello"),
+              Text("Please feel free to send a message relating to membership information, or general gym information."),
               SizedBox(height: 120),
               Column(
                 children: <Widget>[
                   TextFormField(
+                    controller: _usernameController,
                     decoration: InputDecoration(
                       filled: true,
                       labelText: 'Full Name',
@@ -22,6 +30,7 @@ class ContactPage extends StatelessWidget {
                   SizedBox(height: 12.0),
 // [Password]
                   TextFormField(
+                    controller: _emailController,
                     decoration: InputDecoration(
                       filled: true,
                       labelText: 'Email',
@@ -31,24 +40,39 @@ class ContactPage extends StatelessWidget {
                   SizedBox(height: 12.0),
 // [Password]
                   TextFormField(
+                    controller: _phoneController,
                     decoration: InputDecoration(
                       filled: true,
                       labelText: 'Phone Number',
                     ),
                   ),
 // [Password]
+                  TextFormField(
+                    controller: _messageController,
+                    maxLines: 5,
+                    decoration: InputDecoration(
+                      filled: false,
+                      labelText: 'Leave a Message!',
+                    ),
 
-                  Column(
+                  ),
+                  ButtonBar(
                     children: <Widget>[
-                      TextFormField(
-
-                        decoration: InputDecoration(
-
-                          filled: false,
-                          labelText: 'Message',
-                        ),
-
+                      FlatButton(
+                        child: Text('Clear Form'),
+                        onPressed: () {
+                          _usernameController.clear();
+                          _emailController.clear();
+                          _phoneController.clear();
+                          _messageController.clear();
+                        },
                       ),
+                      RaisedButton(
+                        child: Text('Submit'),
+                        onPressed: () {
+                          // TODO: Submit the information to firebase
+                        },
+                      )
                     ],
                   ),
                 ],
